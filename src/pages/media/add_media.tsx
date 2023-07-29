@@ -1,7 +1,6 @@
-import {Component} from "preact";
+import {LoadingOutlined, PlusOutlined} from "@ant-design/icons";
 import {Button, DatePicker, Upload} from "antd";
 import {useState} from "preact/hooks";
-import {LoadingOutlined, PlusOutlined} from "@ant-design/icons";
 
 function AddMediaForm(props) {
      const [loading, setLoading] = useState(false);
