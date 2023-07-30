@@ -1,9 +1,9 @@
-import AddMediaForm from "./media/add_media";
+import UploadMediaForm from "../components/media/upload_media";
 
 export function Home() {
 	return (
 		<>
-			<AddMediaForm/>
+			<UploadMediaForm/>
 		</>
 	);
 }
