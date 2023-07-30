@@ -2,6 +2,8 @@ import {LoadingOutlined, PlusOutlined} from "@ant-design/icons";
 import {Button, DatePicker, Upload} from "antd";
 import {useState} from "preact/hooks";
 
+const MEDIA_ENDPOINT = process.env.STORAGE_ENDPOINT + "/media/"
+
 function AddMediaForm(props) {
      const [loading, setLoading] = useState(false);
      const [imageUrl, setImageUrl] = useState<string>();
@@ -26,7 +28,7 @@ function AddMediaForm(props) {
                     listType="picture-card"
                     className="avatar-uploader"
                     showUploadList={false}
-            action="http://localhost:3000/media/">
+            action={MEDIA_ENDPOINT}>
                 {uploadButton}
             </Upload>
             </p>
