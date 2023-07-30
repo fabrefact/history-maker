@@ -2,7 +2,9 @@ import {LoadingOutlined, PlusOutlined} from "@ant-design/icons";
 import {Button, DatePicker, Upload} from "antd";
 import {useState} from "preact/hooks";
 
-const MEDIA_ENDPOINT = process.env.STORAGE_ENDPOINT + "/media/"
+// don't love having build-tool-specific variables sprinkled throughout code,
+// probably want to create an env util
+const MEDIA_ENDPOINT = import.meta.env.HM_STORAGE_ENDPOINT + "/media/"
 
 function AddMediaForm(props) {
      const [loading, setLoading] = useState(false);
